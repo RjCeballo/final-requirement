@@ -10,7 +10,7 @@ st.write("""
 # Chess Pieces Image Classifier
 """)
 
-file = st.file_uploader("Choose an image from chess piece dataset", type=["jpg", "png"])
+file = st.file_uploader("upload any chess pieces", type=["jpg", "png"])
 
 import cv2
 from PIL import Image, ImageOps
