@@ -6,14 +6,14 @@ from tensorflow import keras
 
 @st.cache(allow_output_mutation=True, hash_funcs={tf.keras.models.Model: id})
 def load_model():
-    model = tf.keras.models.load_model('deploy.h5')
+    model = keras.models.load_model('deploy.h5')
     return model
 
 st.write("""
 # Cifar 100 Image Classifier
 """)
 
-file = st.file_uploader("Choose a cifar 100 photo from your computer", type=["jpg", "png"])
+file = st.file_uploader("Choose a CIFAR-100 photo from your computer", type=["jpg", "jpeg", "png"])
 
 if file is None:
     st.text("Please upload an image file")
