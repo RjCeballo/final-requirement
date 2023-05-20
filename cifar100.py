@@ -1,11 +1,11 @@
 import streamlit as st
 import tensorflow as tf
 
-@st.cache(allow_output_mutation=True)
+@st.cache(allow_output_mutation=True, hash_funcs={tf.keras.models.Model: id})
 def load_model():
   model=tf.keras.models.load_model('deploy.h5')
   return model
-model=load_model()
+
 st.write("""
 # Cifar 100 Image Classifier
 """)
