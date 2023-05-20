@@ -35,7 +35,7 @@ else:
     prediction = import_and_predict(image, model)
     
     class_names = [
-        'bishop', 'king', 'knight', 'pawn', 'queen', 'rook'
+        'bishop', 'queen', 'pawn', 'knight', 'king', 'rook'
     ]
     string = "OUTPUT: " + class_names[np.argmax(prediction)]
     st.success(string)
