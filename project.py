@@ -3,7 +3,7 @@ import tensorflow as tf
 
 @st.cache(allow_output_mutation=True, hash_funcs={tf.keras.models.Model: id})
 def load_model():
-    model = tf.keras.models.load_model('deploy.h5')
+    model = tf.keras.models.load_model('chess.h5')
     return model
 
 st.write("""
