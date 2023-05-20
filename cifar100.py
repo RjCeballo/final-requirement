@@ -2,6 +2,7 @@ import streamlit as st
 import tensorflow as tf
 from PIL import Image, ImageOps
 import numpy as np
+from tensorflow import keras
 
 @st.cache(allow_output_mutation=True, hash_funcs={tf.keras.models.Model: id})
 def load_model():
